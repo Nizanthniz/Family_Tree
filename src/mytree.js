@@ -113,9 +113,20 @@ export default class extends Component {
                   edit: { text: "Add", icon: FamilyTree.icon.add(24, 24, '#aeaeae'), onClick:this.add_form },                   
                   details: {text:"View Details",onClick:this.hi},
                   myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form },
-                  chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
+                  // chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
                   
               },
+            tags: {
+              overrideMenu: {
+                  nodeMenu: {
+                    edit: { text: "Add", icon: FamilyTree.icon.add(24, 24, '#aeaeae'), onClick:this.add_form },                   
+                    details: {text:"View Details",onClick:this.hi},
+                    myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form },
+                    chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
+                  
+                  }
+              }
+            }, 
               editForm:{
                 readOnly:true,
                 photoBinding: "profile",
@@ -153,7 +164,7 @@ export default class extends Component {
                                     
                   details: {text:"View Details",onClick:this.hi},
                   myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form },
-                  chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
+                  // chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
                   
               },
               editForm:{
