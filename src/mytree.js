@@ -20,8 +20,8 @@ import family_details_service from './services/family_details_service';
 
  //const API_URL = 'http://192.168.1.40:12000/api/v1/users/'
 const API_URL = process.env.REACT_APP_API_URL;
-
-var webcallMeIcon = '<svg width="24" height="24" viewBox="0 0 300 400"><g transform="matrix(1,0,0,1,40,40)"><path fill="#5DB1FF" d="M260.423,0H77.431c-5.522,0-10,4.477-10,10v317.854c0,5.522,4.478,10,10,10h182.992c5.522,0,10-4.478,10-10V10 C270.423,4.477,265.945,0,260.423,0z M178.927,302.594c0,5.522-4.478,10-10,10c-5.523,0-10-4.478-10-10v-3.364h20V302.594z M250.423,279.229H87.431V58.624h162.992V279.229z" /><path fill="#5DB1FF" d="M118.5,229.156c4.042,4.044,9.415,6.271,15.132,6.271c5.715,0,11.089-2.227,15.133-6.269l29.664-29.662 c4.09-4.093,6.162-9.442,6.24-14.816c5.601-0.078,10.857-2.283,14.829-6.253l29.66-29.662c4.042-4.043,6.269-9.417,6.269-15.133 c0-5.716-2.227-11.09-6.269-15.13l-9.806-9.806c-4.041-4.043-9.415-6.27-15.132-6.27c-5.716,0-11.09,2.227-15.132,6.269 l-29.663,29.662c-4.092,4.092-6.164,9.443-6.242,14.817c-5.601,0.078-10.857,2.283-14.828,6.252l-29.661,29.662 c-4.042,4.043-6.269,9.418-6.268,15.136c0,5.716,2.227,11.089,6.269,15.129L118.5,229.156z M168.618,147.548l29.662-29.661 c1.587-1.587,3.696-2.461,5.94-2.461c2.243,0,4.353,0.874,5.938,2.461l9.808,9.808c1.586,1.586,2.46,3.694,2.46,5.937 c0,2.244-0.874,4.354-2.462,5.941l-29.658,29.661c-1.588,1.587-3.697,2.46-5.941,2.46c-2.243,0-4.353-0.874-5.938-2.46 l-0.309-0.309l19.598-19.598c2.539-2.539,2.539-6.654,0-9.192c-2.537-2.538-6.654-2.538-9.191,0l-19.599,19.598l-0.308-0.308 C165.344,156.152,165.345,150.823,168.618,147.548z M117.888,198.28l29.66-29.661c1.587-1.586,3.695-2.46,5.939-2.46 c2.242,0,4.349,0.872,5.934,2.455c0.002,0.001,0.004,0.003,0.005,0.005l0.309,0.309l-19.598,19.598 c-2.539,2.538-2.539,6.653,0,9.191c1.269,1.27,2.933,1.904,4.596,1.904s3.327-0.635,4.596-1.904l19.599-19.598l0.309,0.309 c3.273,3.273,3.273,8.603,0,11.877l-29.662,29.66c-1.588,1.588-3.698,2.462-5.941,2.462c-2.243,0-4.352-0.874-5.938-2.462 l-9.807-9.806c-1.586-1.586-2.46-3.694-2.46-5.938C115.426,201.978,116.3,199.868,117.888,198.28z" /></g></svg>';
+{/* <svg  width="24" height="24" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 1591.158 1699.858" enable-background="new 0 0 1591.158 1699.858" xml:space="preserve"><g><path d="M1544.421,1649.929c-55.512-26.27-257.99-152.745-292.701-346.809c144.773-131.753,235.646-321.703,235.646-532.876c0-397.819-322.496-720.315-720.315-720.315S46.736,372.425,46.736,770.244s322.496,720.315,720.315,720.315c101.726,0,198.525-21.092,286.269-59.133h0C1190.734,1565.7,1299.361,1590.704,1544.421,1649.929z"/><path fill="#FFFFFF" enable-background="new    " d="M1193.39,544.472c-24.343-94.788-100.899-154.815-206.219-166.198c-9.155-0.989-18.058-1.469-26.739-1.469c-91.551,0-156.69,53.463-193.932,126.534c-38.906-76.261-105.318-125.724-202.15-125.722c-6.408,0-12.957,0.217-19.632,0.657c-96.308,6.348-179.041,63.939-205.107,176.203c-46.888,201.946,175.045,408.381,426.89,609.207C1034.332,964.221,1243.289,738.771,1193.39,544.472z"/></g></svg> */}
+var webcallMeIcon = '<svg version="1.0"  width="24" height="24"  xmlns="http://www.w3.org/2000/svg" width="980.000000pt" height="908.000000pt" viewBox="0 0 980.000000 908.000000" preserveAspectRatio="xMidYMid meet"> <g transform="translate(0.000000,908.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M4495 9059 c-1284 -95 -2444 -592 -3289 -1409 -659 -638 -1063 -1416 -1178 -2270 -29 -217 -31 -652 -5 -855 113 -853 481 -1600 1103 -2237 l114 -117 -145 -1077 c-80 -592 -144 -1078 -143 -1080 2 -1 419 263 927 587 l923 590 136 -49 c646 -234 1264 -342 1957 -342 261 0 438 10 665 36 816 94 1593 360 2247 770 889 558 1517 1328 1813 2224 372 1123 161 2327 -580 3315 -827 1103 -2197 1804 -3745 1915 -162 11 -639 11 -800 -1z m800 -450 c1653 -123 3087 -997 3725 -2269 412 -821 447 -1744 100 -2589 -481 -1171 -1658 -2075 -3104 -2385 -170 -37 -427 -76 -636 -98 -167 -17 -784 -17 -950 0 -487 50 -899 141 -1302 287 l-152 56 -202 -20 -201 -20 -521 -330 c-425 -268 -522 -326 -522 -309 0 11 36 282 80 602 l80 582 -65 188 -65 188 -112 117 c-252 264 -417 482 -581 772 -389 685 -510 1479 -341 2231 235 1044 1008 1956 2119 2498 456 222 894 361 1400 444 138 22 388 51 510 59 127 8 614 6 740 -4z"/> <path d="M2645 5690 c-118 -24 -245 -97 -320 -184 -202 -237 -189 -576 29 -791 176 -173 437 -214 666 -103 94 45 206 160 253 258 107 228 66 479 -108 656 -136 139 -334 201 -520 164z"/> <path d="M4892 5680 c-198 -52 -346 -198 -410 -404 -25 -82 -22 -235 8 -325 114 -354 530 -510 848 -319 118 72 217 202 258 343 25 85 23 230 -5 315 -95 298 -400 468 -699 390z"/> <path d="M7170 5680 c-185 -50 -343 -204 -401 -390 -27 -85 -29 -232 -4 -315 53 -185 191 -332 371 -396 82 -30 227 -36 318 -15 141 33 262 118 344 239 71 106 97 196 96 327 -1 89 -5 117 -29 180 -49 133 -123 227 -237 301 -127 81-309 109 -458 69z"/></g></svg>';
 export default class extends Component {
     state={
         nodes:this.props.nodes,
@@ -46,6 +46,7 @@ export default class extends Component {
         this.onsubmit=this.onsubmit.bind(this);
         this.onfirssubmit=this.onfirssubmit.bind(this);
         this.getdata=this.getdata.bind(this);
+        this.chat=this.chat.bind(this);
         this.first_node=this.first_node.bind(this);
        
 
@@ -111,8 +112,8 @@ export default class extends Component {
             
                   edit: { text: "Add", icon: FamilyTree.icon.add(24, 24, '#aeaeae'), onClick:this.add_form },                   
                   details: {text:"View Details",onClick:this.hi},
-                  myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form }
-                  
+                  myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form },
+                  chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
                   
               },
               editForm:{
@@ -135,7 +136,9 @@ export default class extends Component {
           });
           }
           else{
+          
             this.family = new FamilyTree (this.divRef.current , {
+            
               nodes:nodes,
              
               nodeBinding: {
@@ -144,12 +147,13 @@ export default class extends Component {
                   img_0: "profile",
                   names_0:"name"
               },
-              template: "hugo",        
+              template: "hugo",  
+                  
               nodeMenu:{           
                                     
                   details: {text:"View Details",onClick:this.hi},
-                  myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form }
-                  
+                  myMenuItem:{text:"Invite",  icon: FamilyTree.icon.share(24, 24, '#aeaeae'), onClick:this.invite_form },
+                  chat:{text:"Chat",  icon: webcallMeIcon, onClick:this.chat }
                   
               },
               editForm:{
@@ -282,6 +286,20 @@ export default class extends Component {
                         
             
               window.open('https://familytree1.page.link/invite1')
+             }
+              
+        }) 
+        
+
+         }
+         async chat(nodeId){
+          await family_details_service.getuseridbynodeid(nodeId,this.props.user_id).then(
+            async response => {
+           
+             if(response.status=200){
+                        
+            
+              window.open('https://familytree1.page.link/tree')
              }
               
         }) 

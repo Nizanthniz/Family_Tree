@@ -1,7 +1,7 @@
 import axios from "axios";
 
-//const API_URL = 'http://192.168.1.40:12000/api/v1/users/'
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = 'http://localhost:12000/api/v1/users/'
+// const API_URL = process.env.REACT_APP_API_URL;
 
 class Familyservice {
 
@@ -59,8 +59,21 @@ class Familyservice {
             return response.data;
           });
       }
+
+      async getuseridbynodeid(nodeid,user_id){
+        const insertData = new FormData();
+        insertData.set('node_id',nodeid)
+        insertData.set('user_id',user_id)
+        return axios
+          .post(API_URL + 'getuseridbynodeid',insertData)
+          .then((response) => {
+            return response.data;
+          });
+      }
       
       }
+
+      
 
 
 export default new Familyservice();
