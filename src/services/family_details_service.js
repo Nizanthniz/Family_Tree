@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://161.97.72.249:12000/api/v1/users/'
+const API_URL = 'http://161.97.180.132:12000/api/v1/users/'
 // const API_URL = process.env.REACT_APP_API_URL;
 
 class Familyservice {
