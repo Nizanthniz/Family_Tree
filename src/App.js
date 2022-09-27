@@ -7,6 +7,7 @@ import Sample from "./sample";
 
 
 
+
 function App(){
   return(
     <>
@@ -15,6 +16,7 @@ function App(){
         <Route path="/sample1" element={<Sample/>} />
         <Route path="/mytree" element={<Mytree/>} />
         <Route path="/main/:id/:user_id" element={<Main/>} />
+  
         
        
       </Routes>

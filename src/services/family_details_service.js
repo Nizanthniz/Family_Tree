@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:12000/api/v1/users/'
+const API_URL = 'http://161.97.72.249:12000/api/v1/users/'
 // const API_URL = process.env.REACT_APP_API_URL;
 
 class Familyservice {
@@ -27,13 +27,14 @@ class Familyservice {
  
 
 
-      async insert(nodeId,mid,fid,name,dob,phone,gender,relatives,pids,profile,family_id){
+      async insert(nodeId,mid,fid,name,dob,death,phone,gender,relatives,pids,profile,family_id){
         const insertData = new FormData();
         insertData.set('nodeId',nodeId)
         insertData.set('mid',mid)
         insertData.set('fid',fid)
         insertData.set('name',name)
         insertData.set('dob',dob)
+        insertData.set('death',death)
         insertData.set('phone',phone)
         insertData.set('gender',gender)
         insertData.set('relatives',relatives)

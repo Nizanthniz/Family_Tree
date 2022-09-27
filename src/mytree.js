@@ -27,6 +27,7 @@ export default class extends Component {
         nodes:this.props.nodes,
         user_name:"",
         gender:"",
+        new_death:'',
         nodeId:'',
         user_profile:[],
         values:new Date(),
@@ -70,7 +71,8 @@ export default class extends Component {
                   field_0: "name",
                   field_1:"gender",
                   img_0: "profile",
-                  names_0:"name"
+                  names_0:"name",
+                  death:"death"
               },
               template: "hugo",        
               nodeMenu: {            
@@ -89,6 +91,7 @@ export default class extends Component {
                   { type: 'textbox', label: 'Date Of Birth', binding: 'dob' },
                   { type: 'textbox', label: 'Mobile Number', binding: 'phone' },
                   { type: 'textbox', label: 'Family Id', binding: 'family_id' },
+                  { type: 'textbox', label: 'Date Of Death', binding: 'death' },
     
                 ]
               }
@@ -105,7 +108,8 @@ export default class extends Component {
                   field_0: "name",
                   field_1:"gender",
                   img_0: "profile",
-                  names_0:"name"
+                  names_0:"name",
+                  death:"death"
               },
               template: "hugo",        
               nodeMenu: {
@@ -138,6 +142,7 @@ export default class extends Component {
                   { type: 'textbox', label: 'Date Of Birth', binding: 'dob' },
                   { type: 'textbox', label: 'Mobile Number', binding: 'phone' },
                   { type: 'textbox', label: 'Family Id', binding: 'family_id' },
+                  { type: 'textbox', label: 'Date Of Death', binding: 'death' },
     
                 ]
               }
@@ -156,7 +161,8 @@ export default class extends Component {
                   field_0: "name",
                   field_1:"gender",
                   img_0: "profile",
-                  names_0:"name"
+                  names_0:"name",
+                  death:"death"
               },
               template: "hugo",  
                   
@@ -188,6 +194,7 @@ export default class extends Component {
                   { type: 'textbox', label: 'Date Of Birth', binding: 'dob' },
                   { type: 'textbox', label: 'Mobile Number', binding: 'phone' },
                   { type: 'textbox', label: 'Family Id', binding: 'family_id' },
+                  { type: 'textbox', label: 'Date Of Death', binding: 'death' },
     
                 ]
               }
@@ -381,13 +388,15 @@ export default class extends Component {
           var dob="";
           var phone="";
           var gender="";
-          var pids="";
+          var pids="";          
+          var death="";
 
           if(this.state.relatives==='child' && this.state.gender==='1'){
              mid="";
              fid=this.state.nodeId
              name = this.state.new_user_name;
              dob=this.state.new_dob;
+             death= this.state.new_death;
              phone=this.state.new_mobile_number;
              gender=this.state.new_gender
     
@@ -398,6 +407,7 @@ export default class extends Component {
              fid="";
              name = this.state.new_user_name;
              dob=this.state.new_dob;
+             death= this.state.new_death;
              phone=this.state.new_mobile_number;
              gender=this.state.new_gender         
             
@@ -407,6 +417,7 @@ export default class extends Component {
             pids=this.state.nodeId;
             name = this.state.new_user_name;
             dob=this.state.new_dob;
+            death= this.state.new_death;
             phone=this.state.new_mobile_number;
             gender=this.state.new_gender
 
@@ -415,6 +426,7 @@ export default class extends Component {
             pids="";
             name = this.state.new_user_name;
             dob=this.state.new_dob;
+            death= this.state.new_death;
             phone=this.state.new_mobile_number;
             gender=this.state.new_gender
 
@@ -424,11 +436,12 @@ export default class extends Component {
             pids="";
             name = this.state.new_user_name;
             dob=this.state.new_dob;
+            death= this.state.new_death;
             phone=this.state.new_mobile_number;
             gender=this.state.new_gender
           }
         
-          await family_details_service.insert(this.state.nodeId,mid,fid,name,dob,phone,gender,this.state.relatives,pids,this.state.user_profile,this.props.family_id).then(
+          await family_details_service.insert(this.state.nodeId,mid,fid,name,dob,death,phone,gender,this.state.relatives,pids,this.state.user_profile,this.props.family_id).then(
             async response => {
               if(response.status=200){
                 await family_details_service.getdata(this.props.family_id,this.props.user_id).then(
@@ -475,12 +488,14 @@ export default class extends Component {
           var phone="";
           var gender="";
           var pids="";
+          var death="";
 
           if(this.state.relatives==='child' && this.state.gender==='1'){
              mid="";
              fid=this.state.nodeId
              name = this.state.new_user_name;
              dob=this.state.new_dob;
+             death=this.state.new_death;
              phone=this.state.new_mobile_number;
              gender=this.state.new_gender
     
@@ -491,6 +506,7 @@ export default class extends Component {
              fid="";
              name = this.state.new_user_name;
              dob=this.state.new_dob;
+             death=this.state.new_death;
              phone=this.state.new_mobile_number;
              gender=this.state.new_gender         
             
@@ -500,6 +516,7 @@ export default class extends Component {
             pids=this.state.nodeId;
             name = this.state.new_user_name;
             dob=this.state.new_dob;
+            death=this.state.new_death;
             phone=this.state.new_mobile_number;
             gender=this.state.new_gender
 
@@ -508,12 +525,13 @@ export default class extends Component {
             pids="";
             name = this.state.new_user_name;
             dob=this.state.new_dob;
+            death=this.state.new_death;
             phone=this.state.new_mobile_number;
             gender=this.state.new_gender
 
           }
         
-          await family_details_service.insert(this.state.nodeId,mid,fid,name,dob,phone,gender,this.state.relatives,pids,this.state.user_profile,this.props.family_id).then(
+          await family_details_service.insert(this.state.nodeId,mid,fid,name,dob,death,phone,gender,this.state.relatives,pids,this.state.user_profile,this.props.family_id).then(
             async response => {
               if(response.status=200){
                 await family_details_service.getdata(this.props.family_id,this.props.user_id).then(
@@ -665,6 +683,15 @@ export default class extends Component {
                             <Calendar onChange={this.onChange} value={this.state.value} style={{position:'relative',bottom:'-18px'}} />
                             : <div></div>} */}
                             </div>
+                            <div className="form-group forms_group">
+                            <h6 style={{position:'relative',left:'-35%'}}>Date Of Death</h6> 
+                            <input type="date" class="form-control date-field float-md-right position-relative " placeholder="Select Date Of Death"  id="new_death" name="new_death"   value={this.state.new_death}
+                            onChange={this.onChangenew_details}  />
+                            {/* <img src={calendar} alt="" className="calendar_icon" onClick={this.calendaropen}/>
+                            {this.state.open ? 
+                            <Calendar onChange={this.onChange} value={this.state.value} style={{position:'relative',bottom:'-18px'}} />
+                            : <div></div>} */}
+                            </div>
                             <div className="form-group forms_group" >
                             <h6 style={{position:'relative',left:'-31%'}}>Mobile Number</h6>
                               <input type="number" className="form-control" pattern="[0-9]{10}" maxlength="10" placeholder="Mobile Number" id="new_mobile_number" name="new_mobile_number"
@@ -749,10 +776,11 @@ export default class extends Component {
                             <h6 style={{position:'relative',left:'-35%'}}>Date Of Birth</h6> 
                             <input type="date" class="form-control date-field float-md-right position-relative " placeholder="Select Date Of Birth"  id="new_dob" name="new_dob"   value={this.state.new_dob}
                             onChange={this.onChangenew_details} required />
-                            {/* <img src={calendar} alt="" className="calendar_icon" onClick={this.calendaropen}/>
-                            {this.state.open ? 
-                            <Calendar onChange={this.onChange} value={this.state.value} style={{position:'relative',bottom:'-18px'}} />
-                            : <div></div>} */}
+                            </div>
+                            <div className="form-group forms_group">
+                            <h6 style={{position:'relative',left:'-35%'}}>Date Of Death</h6> 
+                            <input type="date" class="form-control date-field float-md-right position-relative " placeholder="Select Date Of Birth"  id="new_death" name="new_death"   value={this.state.new_death}
+                            onChange={this.onChangenew_details} required />
                             </div>
                             <div className="form-group forms_group" >
                             <h6 style={{position:'relative',left:'-31%'}}>Mobile Number</h6>
